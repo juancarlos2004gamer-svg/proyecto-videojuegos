@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Calificación - WUB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mis juegos favoritos 🎮</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="guias.html">Noticia</a>
+        <a href="mis-juegos.html">Mis juegos</a>
+        <a href="form.html">Calificacion</a>
+    </nav>
+
+    <main>
+        <section class="formulario-seccion">
+            <h2>Formulario de Calificación</h2>
+            <p class="intro">Ayúdanos a mejorar nuestra página dejando tu opinión.</p>
+
+            <form id="formCalificacion">
+                <div class="form-group">
+                    <h4>1. Nombre:</h4>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <h4>2. Correo electrónico:</h4>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <h4>3. ¿Cómo calificarías el diseño de la página?</h4>
+                    <select name="diseno" id="diseno" required>
+                        <option value="Excelente">Excelente</option>
+                        <option value="Bueno">Bueno</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Malo">Malo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h4>4. ¿Qué tan fácil te resultó navegar en la página?</h4>
+                    <div class="radio-group">
+                        <label><input type="radio" name="navegacion" value="Muy fácil" required> Muy fácil</label>
+                        <label><input type="radio" name="navegacion" value="Fácil"> Fácil</label>
+                        <label><input type="radio" name="navegacion" value="Difícil"> Difícil</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h4>5. ¿Qué aspectos te gustaron más?</h4>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="aspectos" value="Rapidez"> Rapidez de carga</label>
+                        <label><input type="checkbox" name="aspectos" value="Diseño"> Diseño</label>
+                        <label><input type="checkbox" name="aspectos" value="Contenido"> Contenido</label>
+                        <label><input type="checkbox" name="aspectos" value="Interactividad"> Interactividad</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h4>6. ¿Qué mejorarías de la página?</h4>
+                    <textarea name="mejora" id="mejora" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <h4>7. ¿Recomendarías nuestra página?</h4>
+                    <div class="radio-group">
+                        <label><input type="radio" name="recomendar" value="Sí" required> Sí</label>
+                        <label><input type="radio" name="recomendar" value="No"> No</label>
+                    </div>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="button" onclick="mostrarDatos()">ENVIAR</button>
+                    <button type="reset">LIMPIAR</button>
+                </div>
+            </form>
+
+            <br>
+            <h3 id="respuestas-titulo" style="display:none;">Respuestas del Usuario</h3>
+            <table border="1" id="tablaDatos" style="display:none;">
+                <thead>
+                    <tr><th>Pregunta</th><th>Respuesta</th></tr>
+                </thead>
+                <tbody id="cuerpoTabla"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Mi web de videojuegos</p>
+    </footer>
+
+   <script src="JavaScript/main.js"></script>
+</body>
+</html>
